@@ -22,8 +22,8 @@ public class ClienteController {
 		return repository.save(c);
 	}
 	
-	@GetMapping("/")
-	public String ola() {
-		return"Ola Mundo";
+	@GetMapping("/listar")
+	public Iterable<Cliente> listar() {
+		return repository.findAll();
 	}
 }
